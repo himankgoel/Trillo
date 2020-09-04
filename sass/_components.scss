@@ -1,0 +1,57 @@
+.logo{
+    height: 3.25rem;
+    margin-left: 2rem;
+}
+
+.search{
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    &__icon{
+        width: 2rem;
+        height: 2rem;
+    }
+    &__input{
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        padding: .7rem 2rem;
+        
+        border: none;
+        border-radius: 100px;
+        background-color: var(--color-grey-light-2);
+        width: 80%;
+        margin-right: -3.5rem;
+        transition: all .2s;
+        &:focus{
+            width: 90%;
+            outline: none;
+            background-color: var(--color-grey-light-3);
+        }
+        &::-webkit-input-placeholder{
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
+    }
+    &__button{
+        border: none;
+        background-color: var(--color-grey-light-2);
+        &:focus{
+            outline: none;
+        }
+        &:active{
+            transform: translateY(2px);
+        }
+    }
+}
+.user-nav{
+    &__icon{
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+    &__user-photo{
+        border-radius: 50%;
+        height: 3.75rem;
+    }
+}
