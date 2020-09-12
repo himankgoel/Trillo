@@ -176,6 +176,11 @@
   .btn-inline:focus {
     outline: none;
     animation: pulsate 1s infinite; }
+  .btn-inline span {
+    margin-left: .3rem;
+    transition: margin-left .2s; }
+  .btn-inline:hover span {
+    margin-left: .8rem; }
 
 @keyframes pulsate {
   0% {
@@ -228,6 +233,52 @@
   .recommend__photo:not(:last-child) {
     margin-right: -1.6rem; }
 
+.review {
+  background-color: white;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-light);
+  position: relative;
+  overflow: hidden; }
+  .review__text {
+    padding-bottom: 2rem;
+    position: relative;
+    z-index: 2; }
+  .review__user {
+    border-top: var(--line);
+    padding-top: 2rem;
+    display: flex;
+    align-items: center; }
+  .review__user-box {
+    margin-right: auto;
+    margin-left: 1.3rem; }
+  .review__user-name {
+    font-size: 1.2rem;
+    font-size: 600;
+    text-transform: uppercase;
+    margin-bottom: .4rem; }
+  .review__user-date {
+    font-size: 1rem;
+    color: var(--color-grey-dark-3); }
+  .review__rating {
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-weight: 300; }
+  .review__photo {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%; }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    line-height: 1;
+    top: -2.75rem;
+    left: -1rem;
+    font-size: 20rem;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif;
+    z-index: 1; }
+
 /*
 COLORS
 Primary: #eb2f64
@@ -252,7 +303,9 @@ Grey dark 3: #999
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
-  --line:1px solid var(--color-grey-light-2); }
+  --line:1px solid var(--color-grey-light-2);
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06); }
 
 * {
   margin: 0;
@@ -308,13 +361,13 @@ body {
   flex: 1; }
 
 .detail {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light-2);
   border-bottom: 1px solid var(--color-grey-light-4); }
 
 .description {
-  font-size: 1.4rem;
   background-color: #FFF;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   flex: 0 0 60%;
@@ -322,5 +375,7 @@ body {
   padding: 3rem; }
 
 .user-reviews {
-  background-color: orange;
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }

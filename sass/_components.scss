@@ -220,6 +220,13 @@
         outline: none;
         animation:pulsate 1s infinite;
     }
+    & span{
+        margin-left: .3rem;
+        transition: margin-left .2s;
+    }
+    &:hover span{
+        margin-left: .8rem;
+    }
 }
 @keyframes pulsate{
     0%{
@@ -286,5 +293,64 @@
     }
     &__photo:not(:last-child){
         margin-right: -1.6rem;
+    }
+}
+
+.review{
+    background-color: white;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-light);
+    position: relative;
+    overflow: hidden;
+    &__text{
+        padding-bottom: 2rem;
+        position: relative;
+        z-index: 2;
+    }
+    &__user{
+        border-top: var(--line);
+        padding-top: 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__user-box{
+        margin-right: auto;
+        margin-left: 1.3rem;
+    }
+    &__user-name{
+        font-size:1.2rem;
+        font-size:600;
+        text-transform: uppercase;
+        margin-bottom: .4rem;
+    }
+    &__user-date{
+        font-size:1rem;
+        color: var(--color-grey-dark-3);
+    }
+    
+    &__rating{
+        color: var(--color-primary);
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+
+    &__photo{
+        height: 3rem;
+        width:3rem;
+        border-radius: 50%;
+    }
+
+    &::before{
+        content: "\201C";
+        position: absolute;
+        line-height: 1;
+        top: -2.75rem;
+        left: -1rem;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        z-index: 1;
     }
 }
